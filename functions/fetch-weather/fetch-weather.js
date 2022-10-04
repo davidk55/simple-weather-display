@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 const handler = async (event) => {
   const { city } = event.queryStringParameters;
 
@@ -19,4 +21,4 @@ const handler = async (event) => {
     });
 };
 
-module.exports = { handler };
+export { handler };
