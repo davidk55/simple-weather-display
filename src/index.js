@@ -33,6 +33,7 @@ var weather = {
       (3.6 * wind).toFixed(2) + ' km/h';
     document.body.style.backgroundImage =
       "url('https://source.unsplash.com/1600x900/?" + name.toLowerCase() + "')";
+    document.querySelector('#weather-card').classList.remove('loading');
   },
   search: function search() {
     this.fetchWeather(document.querySelector('#weather-input').value);

@@ -113,6 +113,10 @@ body {
     }
   }
 
+  .weather-card.loading {
+    visibility: hidden;
+  }
+
   footer {
     width: 100%;
     #attribution {
