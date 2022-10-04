@@ -1,47 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-<head>
-  <title>
-    <%= htmlWebpackPlugin.options.title %>
-  </title <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-
-  <main class="weather-card loading" id="weather-card">
-    <div class="weather-card__input-container">
-      <input class="weather-card__input-container__input" id="weather-input" type="text" name="" placeholder="Tokyo"
-        autocomplete="off">
-    </div>
-    <h1 class="weather-card__heading" id="weather-heading">Weather in Tokyo</h1>
-    <div class="weather-card__weather" id="weather">
-      <h2 class="weather-card__weather__degree" id="weather-degree">12°C</h2>
-      <div class="weather-card__weather__type">
-        <img class="weather-card__weather__type__icon" src="https://openweathermap.org/img/wn/04n.png"
-          id="weather-icon">
-        <div class="weather-card__weather__type__description" id="weather-description">Cloudy</div>
+  <body>
+    <main class="weather-card loading" id="weather-card">
+      <div class="weather-card__input-container">
+        <input
+          class="weather-card__input-container__input"
+          id="weather-input"
+          type="text"
+          name=""
+          placeholder="Tokyo"
+          autocomplete="off"
+        />
       </div>
-    </div>
-    <div class="weather-card__further-stats">
-      <dl class="weather-card__further-stats__humidity" id="humidity">
-        <dt class="weather-card__further-stats__humidity__term">Humidity:</dt>
-        <dd class="weather-card__further-stats__humidity__description" id="humidity-description">82 %</dd>
-      </dl>
-      <dl class="weather-card__further-stats__wind" id="wind">
-        <dt class="weather-card__further-stats__wind__term">Wind:</dt>
-        <dd class="weather-card__further-stats__wind__description" id="wind-description">12 km/h</dd>
-      </dl>
-    </div>
-  </main>
+      <h1 class="weather-card__heading" id="weather-heading">
+        Weather in Tokyo
+      </h1>
+      <div class="weather-card__weather" id="weather">
+        <h2 class="weather-card__weather__degree" id="weather-degree">12°C</h2>
+        <div class="weather-card__weather__type">
+          <img
+            class="weather-card__weather__type__icon"
+            src="https://openweathermap.org/img/wn/04n.png"
+            id="weather-icon"
+          />
+          <div
+            class="weather-card__weather__type__description"
+            id="weather-description"
+          >
+            Cloudy
+          </div>
+        </div>
+      </div>
+      <div class="weather-card__further-stats">
+        <dl class="weather-card__further-stats__humidity" id="humidity">
+          <dt class="weather-card__further-stats__humidity__term">Humidity:</dt>
+          <dd
+            class="weather-card__further-stats__humidity__description"
+            id="humidity-description"
+          >
+            82 %
+          </dd>
+        </dl>
+        <dl class="weather-card__further-stats__wind" id="wind">
+          <dt class="weather-card__further-stats__wind__term">Wind:</dt>
+          <dd
+            class="weather-card__further-stats__wind__description"
+            id="wind-description"
+          >
+            12 km/h
+          </dd>
+        </dl>
+      </div>
+    </main>
 
-  <footer>
-    <div id="attribution">
-      <p>Made by <a href="https://github.com/davidk55">DavidK55</a>.</p>
-    </div>
-  </footer>
-
-</body>
-
+    <footer>
+      <div id="attribution">
+        <p>Made by <a href="https://github.com/davidk55">DavidK55</a>.</p>
+      </div>
+    </footer>
+  </body>
 </html>
