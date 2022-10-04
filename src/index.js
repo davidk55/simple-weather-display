@@ -38,6 +38,18 @@ var weather = {
     this.fetchWeather(document.querySelector('#weather-input').value);
   },
 };
+var cities = [
+  'berlin',
+  'tokyo',
+  'barcelona',
+  'amsterdam',
+  'london',
+  'vienna',
+  'kyoto',
+  'osaka',
+];
+weather.fetchWeather(cities[Math.floor(Math.random() * cities.length)]);
+
 // ========================= EVENT LISTENER =========================
 document
   .querySelector('#weather-input')
