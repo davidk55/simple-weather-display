@@ -1,20 +1,10 @@
 import './styles/main.scss';
 
 var weather = {
-  apiKey: '',
   fetchWeather(city) {
-    fetch(
-      'https://api.openweathermap.org/data/2.5/weather?q=' +
-        city +
-        '&units=metric&appid=' +
-        this.apiKey
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        return this.displayWeather(data);
-      });
+    fetch(`/.netlify/functions/fetch-weather?city=${city}`)
+      .then((response) => response.json())
+      .then((data) => this.displayWeather(data));
   },
   displayWeather(data) {
     const name = data.name;
