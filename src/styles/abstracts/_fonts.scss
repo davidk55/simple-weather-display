@@ -1,0 +1,15 @@
+@mixin font($font-family, $font-name, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+    src: url('./../assets/fonts/' + $font-name + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@include font('Roboto', 'Roboto-Regular', 400, 'normal');
+@include font('Roboto', 'Roboto-Bold', 700, 'normal');
+
+:root {
+  --primary-font: 'Roboto', sans-serif;
+}
