@@ -4,7 +4,8 @@ var weather = {
   fetchWeather(city) {
     fetch(`/.netlify/functions/fetch-weather?city=${city}`)
       .then((response) => response.json())
-      .then((data) => this.displayWeather(data));
+      .then((data) => this.displayWeather(data))
+      .catch((error) => console.log(error));
   },
   displayWeather(data) {
     const name = data.name;
@@ -25,7 +26,7 @@ var weather = {
       "url('https://source.unsplash.com/1600x900/?" + name.toLowerCase() + "')";
     document.querySelector('#weather-card').classList.remove('loading');
   },
-  search: function search() {
+  search() {
     this.fetchWeather(document.querySelector('#weather-input').value);
   },
 };
@@ -42,8 +43,6 @@ var cities = [
 weather.fetchWeather(cities[Math.floor(Math.random() * cities.length)]);
 
 // ========================= EVENT LISTENER =========================
-document
-  .querySelector('#weather-input')
-  .addEventListener('keyup', function (e) {
-    if (e.key == 'Enter') weather.search();
-  });
+document.querySelector('#weather-input').addEventListener('keyup', (e) => {
+  if (e.key == 'Enter') weather.search();
+});
